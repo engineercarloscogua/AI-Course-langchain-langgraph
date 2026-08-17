@@ -173,6 +173,7 @@ venv.bak/
 # Generated local vector stores and databases
 **/chroma_db/
 **/crhoma_db/
+Tema_5/chroma_memoria/
 *.sqlite
 *.sqlite3
 *.db
