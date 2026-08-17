@@ -1,0 +1,60 @@
+==|==|== ==|==|== El rol de cada componenete ==|==|== ==|==|== 
+
+PYTHON
+│
+├── organiza el proceso
+├── llama funciones
+├── controla errores
+├── combina resultados
+└── decide qué hacer
+
+LLM
+│
+├── resume
+├── clasifica
+├── analiza
+├── genera texto
+└── interpreta lenguaje natural
+
+==|==|====|==|==  Logica ==|==|== ==|==|== ==|==|== 
+
+Texto
+  │
+  ▼
+preprocess_text()   --------------------> Función Runeada
+  │
+  ▼
+process_one() ---------------------------> Función Runeada
+  ├── generate_summary()
+  ├── analyze_sentiment()
+  └── merge_results()
+  │
+  ▼
+Resultado final
+
+Resumen 
+
+todo el flujo es una especie de "cascada". Las funciones de resumen y análisis de sentimiento se ejecutan dentro de process_one(). Luego, process_one() empaqueta los resultados en un diccionario (es decir, crea un objeto que contiene las claves "resumen" y "sentimiento_data") y se lo pasa a merge_results(). Esa función solo toma ese diccionario empaquetado y extrae las partes necesarias (resumen, sentimiento y razón) para devolver un resultado final simplificado.
+
+Así que sí, data es ese diccionario que tú armaste con los resultados de las funciones previas, y esa es la información que merge_results() utiliza para devolver un formato más limpio.
+
+texto_prueba
+     │
+     ▼
+chain.invoke(texto)
+     │
+     ▼
+process_one(text)
+     │
+     ├── resumen = generate_summary()
+     │
+     ├── sentimiento_data = analyze_sentiment()
+     │
+     ▼
+{
+    "resumen": resumen,
+    "sentimiento_data": sentimiento_data
+}
+     │
+     ▼
+merge_results(data)

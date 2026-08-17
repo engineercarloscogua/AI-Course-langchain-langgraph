@@ -1,0 +1,14 @@
+{
+    "python.defaultInterpreterPath": "${workspaceFolder}/venv/Scripts/python.exe",
+    "python.venvPath": "${workspaceFolder}",
+    "python.terminal.activateEnvironment": true,
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/venv/Lib/site-packages"
+    ],
+    "terminal.integrated.env.windows": {
+        "SSLKEYLOGFILE": null
+    },
+    "cSpell.enabled": false,
+    "cSpell.language": "en,es"
+}

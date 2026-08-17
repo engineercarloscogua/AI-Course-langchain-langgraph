@@ -147,15 +147,43 @@ activemq-data/
 # SageMath parsed files
 *.sage.py
 
-# Environments
+# Environments and local secrets
 .env
+.env.*
+!.env.example
 .envrc
+.direnv/
 .venv
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+
+# API credentials, OAuth tokens, and private keys
+**/credentials*.json
+**/client_secret*.json
+**/token*.json
+**/secrets*.json
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Generated local vector stores and databases
+**/chroma_db/
+**/crhoma_db/
+*.sqlite
+*.sqlite3
+*.db
+**/data_level0.bin
+**/header.bin
+**/length.bin
+**/link_lists.bin
+
+# Local documents that may contain personal or contractual information
+Tema_3/Contratos/*.pdf
+Tema_3.1_RAG/documentos/CONTRATO*.pdf
 
 # Spyder project settings
 .spyderproject
@@ -203,8 +231,17 @@ cython_debug/
 # Temporary file for partial code execution
 tempCodeRunnerFile.py
 
+# Obsidian per-user workspace state
+**/.obsidian/workspace.json
+**/.obsidian/workspace-mobile.json
+**/.trash/
+
 # Ruff stuff:
 .ruff_cache/
+
+# Local Python runtime and uv cache used to keep this project self-contained
+.python-runtime/
+.uv-cache/
 
 # PyPI configuration file
 .pypirc
