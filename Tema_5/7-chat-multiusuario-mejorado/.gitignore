@@ -1,0 +1,15 @@
+# Datos privados generados al ejecutar la aplicación:
+# conversaciones, memorias, bases SQLite, registros y PDF normativos cargados.
+runtime/
+
+# Secretos y configuraciones locales. El archivo de ejemplo sí se conserva.
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Cachés y resultados de herramientas Python.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage

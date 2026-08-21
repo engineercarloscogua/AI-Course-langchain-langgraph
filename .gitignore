@@ -160,6 +160,13 @@ ENV/
 env.bak/
 venv.bak/
 
+# Índice local generado por codebase-memory-mcp.
+.codebase-memory/
+
+# Configuración MCP local: contiene una ruta específica de este equipo.
+.codex/config.toml
+
+
 # API credentials, OAuth tokens, and private keys
 **/credentials*.json
 **/client_secret*.json
