@@ -1,0 +1,4 @@
+# Datos locales generados al ejecutar el ejercicio.
+# Contienen conversaciones, checkpoints de SQLite y memorias de Chroma.
+data/
+users/
